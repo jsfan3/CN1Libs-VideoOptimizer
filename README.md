@@ -10,6 +10,7 @@ Follow the standard way to install a CN1Lib from the Extension Manager: https://
 
 ## Example of usage
 ![Example of usage](https://raw.githubusercontent.com/jsfan3/CN1Libs-VideoOptimizer/master/screenshot.png)
+
 Create a new project and add the build hints:
 ```
 ios.NSPhotoLibraryUsageDescription=Some functionality of the application requires access to your media gallery
