@@ -3,7 +3,8 @@ Video optimizer for Android and iOS Codename One apps, for fast upload.
 It allows to get info about a video, get a preview image of a video and optimize a video for fast upload (currently it uses default compression values both on Android and on iOS according to the best trade-off of "quality / file length / time to compress" that I found.
 
 ## Javadocs
-See: 
+See: https://jsfan3.github.io/CN1Libs-VideoOptimizer/
+The main class to be used is: https://jsfan3.github.io/CN1Libs-VideoOptimizer/net/informaticalibera/videoediting/VideoOptimizer.html
 
 ## Installation
 Follow the standard way to install a CN1Lib from the Extension Manager: https://www.codenameone.com/blog/automatically-install-update-distribute-cn1libs-extensions.html
