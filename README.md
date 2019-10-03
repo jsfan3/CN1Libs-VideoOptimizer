@@ -4,6 +4,7 @@ It allows to get info about a video, get a preview image of a video and optimize
 
 ## Javadocs
 See: https://jsfan3.github.io/CN1Libs-VideoOptimizer/
+
 The main class to be used is: https://jsfan3.github.io/CN1Libs-VideoOptimizer/net/informaticalibera/videoediting/VideoOptimizer.html
 
 ## Installation
