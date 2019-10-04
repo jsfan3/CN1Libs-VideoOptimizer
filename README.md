@@ -21,7 +21,7 @@ This can affect the compatibility with your project or with other CN1Libs
 ### Compatibility with devices ###
 The devices supported are:
 - Android 7+ with ARM64 CPU (other CPUs are not supported to keep this CN1Lib as small as possible).
-- iOS 12+
+- iOS 12+ (I don't know about previous versions).
 
 ### Note about app size on Android ###
 This CN1Lib increases your APKs of 6MB because it includes a custom version of [Mobile FFmpeg](https://github.com/tanersener/mobile-ffmpeg) compiled by me. Note that a full version of Mobile FFmpeg requires about 80MB and a minimal version requires about 30MB, so my custom version is a lot smaller. I reduced the CPU support only to ARM64 (that is the most used in the market) and I reduced the number of supported codecs to a minimal set.
