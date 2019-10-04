@@ -37,7 +37,8 @@ The optimized video dimension is close to a 360p video, however the exact size d
 
 ### Speed ###
 On iOS, the optimization is very fast.
-On Android, it's slow and it can take longer time than the video duration. However I chose saving options that are as fast as possible preserving an acceptable video quality.
+
+On Android, it's slow and it can take longer time than the video duration. However I chose options that allow to save as fast as possible preserving an acceptable video quality.
 
 ## Example of usage
 ![Example of usage](https://raw.githubusercontent.com/jsfan3/CN1Libs-VideoOptimizer/master/screenshot.png)
