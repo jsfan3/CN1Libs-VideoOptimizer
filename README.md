@@ -10,6 +10,32 @@ The main class to be used is: https://jsfan3.github.io/CN1Libs-VideoOptimizer/ne
 ## Installation
 Follow the standard way to install a CN1Lib from the Extension Manager: https://www.codenameone.com/blog/automatically-install-update-distribute-cn1libs-extensions.html
 
+### Build hint added automatically and compatibility with other CN1Libs
+Take note that this CN1Lib adds automatically the build hints:
+```
+android.buildToolsVersion=28
+android.min_sdk_version=24
+```
+This can affect the compatibility with your project or with other CN1Libs
+
+### Compatibility with devices ###
+The devices supported are:
+- Android 7+ with ARM64 CPU (other CPUs are not supported to keep this CN1Lib as small as possible).
+- iOS 12+
+
+### Note about app size on Android ###
+This CN1Lib increases your APKs of 6MB because it includes a custom version of [Mobile FFmpeg](https://github.com/tanersener/mobile-ffmpeg) compiled by me. Note that a full version of Mobile FFmpeg requires about 80MB and a minimal version requires about 30MB, so my custom version is a lot smaller. I reduced the CPU support only to ARM64 (that is the most used in the market) and I reduced the number of supported codecs to a minimal set.
+On iOS, there is no impact on app size, because I used the native APIs without any external library.
+
+### Supported input and output video formats ###
+On iOS, the input video formats supported are the one supported by `AVAssetExportSession`, however I didn't find a list of the supported formats: if you find any info, I'll add a link here. The optimized output video is encoded using the option [`AVFileTypeMPEG4`](https://developer.apple.com/documentation/avfoundation/avfiletypempeg4?language=objc), however the Apple's doc doesn't specify which MPEG4 encoder is used.
+
+On Android, I compiled Mobile FFmpeg so: `./android.sh --disable-x86 --disable-x86-64 --disable-arm-v7a --disable-arm-v7a-neon`, that means I didn't include any external library. The supported formats are the ones supported by `libavcodec`: https://en.wikipedia.org/wiki/Libavcodec#Implemented_video_codecs Note that h.264 is only decoded, but the encoding of the optimized video is done using `MPEG-4 Part 2`, that doesn't need any external library (x264 encoder is not an option, because its license doesn't allow its use in a closed source project, and CISCO openh264 is not an option because it's too much slow on encoding, accoring to my tests, and it requires to pay `MPEG LA` licensing fees).
+
+### Speed ###
+On iOS, the optimization is very fast.
+On Android, it's slow and it can take longer time than the video duration. However I chose saving options that are as fast as possible preserving an acceptable video quality.
+
 ## Example of usage
 ![Example of usage](https://raw.githubusercontent.com/jsfan3/CN1Libs-VideoOptimizer/master/screenshot.png)
 
