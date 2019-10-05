@@ -33,7 +33,7 @@ On iOS, the input video formats supported are the one supported by `AVAssetExpor
 On Android, I compiled Mobile FFmpeg so: `./android.sh --disable-x86 --disable-x86-64 --disable-arm-v7a --disable-arm-v7a-neon`, that means I didn't include any external library. The supported formats are the ones supported by `libavcodec`: https://en.wikipedia.org/wiki/Libavcodec#Implemented_video_codecs Note that h.264 is only decoded, but the encoding of the optimized video is done using `MPEG-4 Part 2`, that doesn't need any external library (x264 encoder is not an option, because its license doesn't allow its use in a closed source project, and CISCO openh264 is not an option because it's too much slow on encoding, accoring to my tests, and it requires to pay `MPEG LA` licensing fees).
 
 ### Output video dimension (width and height) ###
-The optimized video dimension is close to a 360p video, however the exact size depends on the input video size. On Android it's used an integer scale factor and on iOS the documentation of the used `AVAssetExportPresetMediumQuality` is too much generic and don't say anything about the output file dimension.
+The optimized video dimension is close to a 360p video, however the exact size depends on the input video size. On Android it's used an integer scale factor and on iOS the documentation of the used `AVAssetExportPresetMediumQuality` is too much generic and it doesn't say anything about the output file dimension.
 
 ### Speed ###
 On iOS, the optimization is very fast.
