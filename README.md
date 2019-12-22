@@ -234,7 +234,7 @@ In the main class, add the following code:
     }
 ```
 
-## Tip: check if a given file is a supported video
+### Tip: check if a given file is a supported video
 
 ```
     private static VideoOptimizer videoOptimizer = new VideoOptimizer();
