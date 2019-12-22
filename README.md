@@ -234,6 +234,27 @@ In the main class, add the following code:
     }
 ```
 
+## Tip: check if a given file is a supported video
+
+```
+    private static VideoOptimizer videoOptimizer = new VideoOptimizer();
+
+    /**
+     * Very fast method to detect if the given file is a supported video
+     * (it relies on VideoOptimizer CN1Lib)
+     *
+     * @param file placed in FileSystemStorage
+     * @return
+     */
+    public static boolean isVideo(String file) {
+        if (videoOptimizer.getVideoDuration(file) > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    ```
+
 ## License
 The software that I wrote to create this CN1Lib is public-domain software, except for the `mobile-ffmpeg.aar` file included in the Android native folder. `mobile-ffmpeg.aar` is a custom version of [Mobile FFmpeg](https://github.com/tanersener/mobile-ffmpeg) compiled by me, licensed under the LGPL v3.0: that means that you can use this software in any project (open-source or commercial closed-source doesn't matter), but the sources used to compile `mobile-ffmpeg.aar` should be available to your users. Note that my `mobile-ffmpeg.aar` doesn't include any GPL software. You can download the sources that I used here: https://archive.org/download/mobileffmpegsources/. The instruction to compile are here: https://github.com/tanersener/mobile-ffmpeg/wiki/Building
 
