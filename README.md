@@ -2,6 +2,8 @@
 Video optimizer for Android and iOS Codename One apps, for fast upload.
 It allows to get info about a video, get a preview image of a video and optimize a video for fast upload (currently it uses default compression values both on Android and on iOS according to the best trade-off of "quality / file length / time to compress" that I found.
 
+_Pay attention to the file extension: on iOS the video file must have a proper extension, it's a requirement of iOS. On Android the video file can be with or without extension._
+
 ## Javadocs
 See: https://jsfan3.github.io/CN1Libs-VideoOptimizer/
 
