@@ -2,6 +2,8 @@ __Update 1__: _Pay attention to copy the video file taken from the Gallery to th
 
 __Update 2__: _Pay attention to the file extension: on iOS the video file must have a proper extension, it's a requirement of iOS. On Android the video file can be with or without extension._
 
+__Update 3__: _If you have the build hint android.buildToolsVersion=28 or android.buildToolsVersion=29, please remove it, as discussed here: https://github.com/jsfan3/CN1Libs-VideoOptimizer/issues/5_
+
 # CN1Libs - VideoOptimizer
 Video optimizer for Android and iOS Codename One apps, for fast upload.
 It allows to get info about a video, get a preview image of a video and optimize a video for fast upload (currently it uses default compression values both on Android and on iOS according to the best trade-off of "quality / file length / time to compress" that I found.
